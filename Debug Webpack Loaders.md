@@ -35,6 +35,9 @@ Run debug button
 
 typings install in the node_modules/@easy-webpack/config-sass folder using commander
 
+
+## Anytime you make changes to your config-sass file you must recompile with tsc ##
+
 ## Use manual tsc compiler ##
 open second jetbrains terminal or run in cmder
 
