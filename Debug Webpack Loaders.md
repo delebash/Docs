@@ -28,7 +28,10 @@ install typings
 
 ## Use manual tsc compiler ##
 open second jetbrains terminal or run in cmder
-tsc --p "F:\Development\GitHub\delebash\Webpack-debug\skeleton-esnext-webpack\node_modules\@easy-webpack\config-sass"  --outDir "./dist"
+
+    tsc --p "F:\Development\GitHub\delebash\Webpack-debug\skeleton-esnext-webpack\node_modules\@easy-webpack\config-sass"
+    
+src and out put files are set in tsconfig.json so all you need to do for running tsc is point to the root folder were tsconfig.json is located by using the  --p parameter
 
 
 ## Doesn't work ##
