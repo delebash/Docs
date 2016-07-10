@@ -16,15 +16,24 @@ Put you break points in the css-loader index.ts file
 
 Run debug button
 
+## Install @easy-webpack sass ##
+    npm install @easy-webpack/config-sass
+
+**Add easy webpack sass to webpack.config.js and comment out css version**
+**MAKE SURE:** you do this in development section
+
+     require('@easy-webpack/config-sass')
+        ({ filename: 'styles.css', allChunks: !!ELECTRON, sourceMap: false, extractText: true }),
+
 ## Compile css-load ts files on change ##
 
-First make sure typescript 2.0 is install
+**First make sure typescript 2.0 is install**
 
     npm install typescript@next
 
-install typings
+**install typings in the easy-webpack/config-sass directory**
 
-    typings install
+typings install in the node_modules/@easy-webpack/config-sass folder using commander
 
 ## Use manual tsc compiler ##
 open second jetbrains terminal or run in cmder
@@ -33,15 +42,5 @@ open second jetbrains terminal or run in cmder
     
 src and out put files are set in tsconfig.json so all you need to do for running tsc is point to the root folder were tsconfig.json is located by using the  --p parameter
 
-
-## Doesn't work ##
-In Webstorm typescript settings set to Typescript version to custom and navigate to your npm global typescript lib folder
-
-    C:\Users\Daniel\AppData\Roaming\npm\node_modules\typescript\lib
-
-Add custom scope for the css-loader folder in you npm directory
-Slider scroll bar over until you see elipse for Scope:
-
-Click on the blue show included button or you will not see any folders listed. Navigate to your css-loader folder under node_modules and select.  Name your scope css-loader. Save
-
-This loader should now be set for your Scope: option
+## If you get errors running tsc  ##
+make sure typescript 2.0 is installed and typings under the config-sass folder is installed
